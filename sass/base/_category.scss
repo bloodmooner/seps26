@@ -5,12 +5,26 @@
 
     &__title {
         margin-bottom: 30px;
+
+        @include for-phone-portrait {
+            margin-bottom: 40px;
+        }
     }
 
     &__items {
         display: grid;
         grid-template-columns: repeat(3, 379px);
         gap: 7px;
+        @include for-tablet-landscape {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @include for-tablet-portrait {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include for-phone-portrait {
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
     }
 
     &__item {
@@ -41,6 +55,10 @@
         transition: all 0.3s;
         &:hover {
             color: #D20004;
+        }
+        @include for-phone {
+            font-size: 14px;
+            line-height: 16px;
         }
     }
 }

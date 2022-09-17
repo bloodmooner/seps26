@@ -5,12 +5,25 @@
 
     &__title {
         margin-bottom: 48px;
+        @include for-phone-portrait {
+            margin-bottom: 20px;
+        }
     }
 
     &__wrapper {
         display: grid;
         grid-template-columns: 467px 699px;
         justify-content: space-between;
+        @include for-desk {
+            grid-template-columns: 370px 650px;
+        }
+        @include for-tablet-landscape {
+            grid-template-columns: 370px 1fr;
+            gap: 50px;
+        }
+        @include for-phone-portrait {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__image {
@@ -28,6 +41,9 @@
     &__info {
         display: flex;
         justify-content: space-between;
+        @include for-tablet-landscape {
+            flex-direction: column;
+        }
     }
 
     &__char {
@@ -54,6 +70,7 @@
         &:nth-child(1) {
             margin-top: 0;
         }
+        
     }
 
     &__char-name {
@@ -95,9 +112,15 @@
             height: 2px;
             border-bottom: 2px dashed #000000;
         }
+        @include for-phone-portrait {
+            margin-top: 15px;
+        }
     }
 
     &__controls {
+        @include for-tablet-landscape {
+            margin-top: 30px;
+        }
     }
 
     &__controls-price {
@@ -116,6 +139,9 @@
             background: #FFFFFF;
             color: #D20004;
         }
+        @include for-tablet-landscape {
+            padding: 15px 48px;
+        }
     }
 
     &__controls-items {
@@ -126,7 +152,9 @@
         display: flex;
         align-items: center;
         margin-top: 12px;
-        
+        @include for-phone-portrait {
+            margin-top: 15px;
+        }
         &:nth-child(1) {
             margin-top: 0;
             .product__controls-icon {
@@ -145,12 +173,22 @@
     }
 
     &__controls-name {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: #000000;
+
     }
 
     &__tabs {
         margin-top: 40px;
         padding-top: 40px;
         border-top: 1px solid #F2F2F2;
+        @include for-phone-portrait {
+            margin-top: 30px;
+            padding-top: 35px;
+        }
     }
 
     &__tab {
@@ -178,6 +216,14 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include for-phone-portrait {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: 15px;
+            &:nth-child(1) {
+                margin-top: 0;
+            }
+        }
     }
 
     &__tab-char-name {
@@ -200,6 +246,9 @@
         font-size: 14px;
         line-height: 16px;
         color: #000000;
+        @include for-phone-portrait {
+            margin-top: 5px;
+        }
     }
 
 
@@ -207,6 +256,9 @@
     }
 
     &__char-sub {
+        @include for-tablet-landscape {
+            margin-top: 10px;
+        }
     }
 
     &__question {
@@ -272,6 +324,9 @@
     text-transform: uppercase;
     color: #888888;
     cursor: pointer;
+    @include for-phone-portrait {
+        padding: 18px 15px;
+    }
 }
 
 .wrapper .active { 
