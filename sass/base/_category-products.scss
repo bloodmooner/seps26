@@ -1,0 +1,120 @@
+.category-products {
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 235px 1fr;
+        gap: 20px;
+        padding-top: 20px;
+        border-top: 1px solid #F2F2F2;
+    }
+
+    &__filter {
+    }
+
+    &__content {
+    }
+
+    &__container {
+        padding: 20px 12px 30px 12px;
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 10px;
+        column-gap: 20px;
+    }
+
+    &__item {
+        position: relative;
+        /* padding: 25px 12px 30px 12px; */
+        border: 1px solid #F2F2F2;
+        border-radius: 3px;
+    }
+
+    &__card {
+    }
+
+    &__image {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__name {
+        margin-top: 15px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 134.4%;
+        color: #000000;
+    }
+
+    &__hover {
+        display: none;
+        position: absolute;
+        /* width: 100%; */
+        /* height: 100%; */
+        top: 16px;
+        left: 12px;
+        background: #fff;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__listitem {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        &:nth-child(1) {
+            margin-top: 0;
+        }
+    }
+
+    &__listname {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        color: #888888;
+    }
+
+    &__listtext {
+        margin-top: 5px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: #000000;
+    }
+
+    &__hover-name {
+        margin-top: 30px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 134.4%;
+        color: #000000;
+    }
+
+    &__link {
+        padding: 15px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        background: #D20004;
+        border-radius: 0px 0px 4px 4px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 134.4%;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        &:hover {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+    }
+}

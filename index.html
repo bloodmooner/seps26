@@ -100,9 +100,12 @@
         </ul>
       </div>
       <div class="catalog__wraper">
-        <h1 class="title catalog__title">
-          Каталог
-        </h1>
+        <div class="title__container catalog__title">
+          <h1 class="title">
+            Каталог
+          </h1>
+        </div>
+
         <div class="catalog__items">
  
           <div class="catalog__item">
@@ -439,62 +442,78 @@
             </div>
         </div>
     </div>
+    
+    
 
-    <div class="application">
-      <div class="application__wrapper">
-          <div class="application__">
-              <img class="application__close-icon" src="assets/svg/modal-close.svg" alt="modal-close" >
-          </div>
-          <div class="application__content">
-              <h3 class="application__title">
-                  Уточнить цену
-              </h3>
-              <div class="application__message">
-                  <h4 class="application__subtitle">
-                      Мы ответим на ваш запрос в течение 15 минут
-                  </h4>
-              </div>
-              <div class="application__form">
-                  <div class="application__row">
-                      <p class="application__name">Ваше имя*</p>
-                      <input class="application__input" type="text" >
-                  </div>
-                  <div class="application__row">
-                      <p class="application__name">Телефон*</p>
-                      <input class="application__input" type="text" >
-                  </div>
-                  <div class="application__row">
-                      <p class="application__name">E-mail*</p>
-                      <input class="application__input" type="text" >
-                  </div>
-                  <div class="application__row">
-                      <p class="application__name">Название товара*</p>
-                      <input class="application__input" type="text" >
-                  </div>
-                  <div class="application__row">
-                      <p class="application__name">Сообщение</p>
-                      <input class="application__input" type="text" >
-                  </div>
 
-                  <div class="application__row application__row_file">
-                      <p class="application__name">Документ, фото или скан</p>
-                  </div>
 
-                  <div class="application__privacy">
-                      <p class="application__privacy-text">
-                          Я согласен на <span class="application__privacy_mark">обработку персональных данных</span>
-                      </p>
-                  </div>
-
-                  <div class="application__btn">
-                      Отправить
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  
+    <!-- Подложка под модальным окном -->
+    <div class="overlays js-overlay-modal">
+        <div class="modal modal_order">
+            <div class="application">
+                <div class="application__wrapper">
+                    <div class="application__content">
+                        <div class="application__header">
+                            <img class="application__close-icon modal__close" src="assets/svg/modal-close.svg" alt="modal-close" >
+                        </div>
+                        <h3 class="application__title">
+                            Уточнить цену
+                        </h3>
+                        <div class="application__message">
+                            <h4 class="application__subtitle">
+                                Мы ответим на ваш запрос в течение 15 минут
+                            </h4>
+                        </div>
+                        <div class="application__form">
+                            <div class="application__row">
+                                <p class="application__name">Ваше имя*</p>
+                                <input class="application__input" type="text" placeholder="Укажите ваше ФИО" >
+                            </div>
+                            <div class="application__row">
+                                <p class="application__name">Телефон*</p>
+                                <input class="application__input" type="text" placeholder="Ваш номер телефона" >
+                            </div>
+                            <div class="application__row">
+                                <p class="application__name">E-mail*</p>
+                                <input class="application__input" type="text" placeholder="Ваш E-mail" >
+                            </div>
+                            <div class="application__row">
+                                <p class="application__name">Название товара*</p>
+                                <input class="application__input application__input_product" type="text" value="Трансформаторная подстанция КТП ТАС К/К 1000/10/0,4" readonly="readonly" >
+                            </div>
+                            <div class="application__row">
+                                <p class="application__name">Сообщение</p>
+                                <textarea class="application__textarea"></textarea>
+                            </div>
+        
+                            <div class="application__row application__row_file">
+                                <p class="application__name">Документ, фото или скан</p>
+                            </div>
+        
+                            <div class="application__privacy">
+                                <div class="application__switch">
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                                <p class="application__privacy-text">
+                                    Я согласен на <a class="application__privacy_mark" href="#" >обработку персональных данных</a>
+                                </p>
+                            </div>
+        
+                            <button class="application__btn">
+                                Отправить
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
   </footer>
+
 
 
   <script

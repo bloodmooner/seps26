@@ -9,4 +9,21 @@
         font-size: 24px;
         line-height: 28px;
     }
+    &__counter {
+        margin-left: 10px;
+        display: inline-block;
+        padding: 4px 7px;
+        background: #F8F8F9;
+        border: 1px solid #F8DFDF;
+        border-radius: 3px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 15px;
+        color: #888888;
+    }
+    &__container {
+        display: flex;
+        align-items: center;
+    }
 }

@@ -1,0 +1,40 @@
+.category-product {
+
+    &__wrapper {
+        margin-bottom: 20px;
+    }
+
+    &__items {
+        display: flex;
+    }
+
+    &__item {
+        margin-left: 10px;
+        padding: 20px 74px 20px 20px;
+        display: flex;
+        align-items: center;
+        border: 1px solid #F2F2F2;
+        border-radius: 3px;
+        &:nth-child(1) {
+            margin-left: 0;
+        }
+    }
+
+    &__icon {
+        margin-right: 20px;
+    }
+
+    &__text {
+        max-width: 164px;
+        width: 100%;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        color: #000000;
+    }
+
+    &__title {
+        margin-bottom: 60px;
+    }
+}
