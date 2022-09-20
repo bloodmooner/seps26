@@ -4,6 +4,10 @@
     }
 
     &__title {
+        
+    }
+
+    &__item-title {
         margin-bottom: 48px;
         @include for-phone-portrait {
             margin-bottom: 20px;
@@ -36,6 +40,9 @@
         img {
             object-fit: cover;
         }
+        @include for-phone-portrait {
+            box-shadow: none;
+        }
     }
 
     &__info {
@@ -47,9 +54,15 @@
     }
 
     &__char {
+        margin-top: 51px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        @include for-phone-portrait {
+            margin-top: 0;
+            padding: 0 19px;
+        }
+        
     }
 
     &__char-title {
@@ -118,6 +131,7 @@
     }
 
     &__controls {
+        margin-top: 51px;
         @include for-tablet-landscape {
             margin-top: 30px;
         }
@@ -142,10 +156,21 @@
         @include for-tablet-landscape {
             padding: 15px 48px;
         }
+        @include for-phone-portrait {
+            /* display: none; */
+            z-index: 100;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
     }
 
     &__controls-items {
         margin-top: 30px;
+        @include for-phone-portrait {
+            margin-top: 0;
+        }
     }
 
     &__controls-item {
@@ -183,7 +208,7 @@
 
     &__tabs {
         margin-top: 40px;
-        padding-top: 40px;
+        padding-top: 52px;
         border-top: 1px solid #F2F2F2;
         @include for-phone-portrait {
             margin-top: 30px;
@@ -192,6 +217,7 @@
     }
 
     &__tab {
+        padding-top: 57px;
     }
 
     &__tab-content {
@@ -213,9 +239,13 @@
     }
 
     &__tab-char-item {
+        margin-top: 15px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        &:nth-child(1) {
+            margin-top: 0;
+        }
         @include for-phone-portrait {
             flex-direction: column;
             align-items: flex-start;
@@ -264,6 +294,18 @@
     &__question {
         display: flex;
         cursor: pointer;
+        &_main {
+            @include for-phone-portrait {
+                display: none;
+            }
+        }
+        &_mob {
+            display: none;
+            @include for-phone-portrait {
+                display: flex;
+                margin-top: 15px;
+            }
+        }
     }
 
     &__question-icon {
@@ -347,6 +389,10 @@
 
 .tab_item {
      display: none; 
+     padding: 0 40px;
+     @include for-phone-portrait {
+        padding: 0;
+     }
 }
 .tab_item:first-child {
      display: block; 

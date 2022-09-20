@@ -1,0 +1,23 @@
+.back {
+
+    &__content {
+        margin-top: 23px;
+        display: flex;
+        align-items: center;
+        @include for-phone-portrait {
+            padding: 0 19px;
+        }
+    }
+
+    &__icon {
+        margin-right: 5px;
+    }
+
+    &__text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        color: #888888;
+    }
+}

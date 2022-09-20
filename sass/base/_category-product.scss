@@ -2,10 +2,16 @@
 
     &__wrapper {
         margin-bottom: 20px;
+        @include for-phone-portrait {
+            margin-bottom: 30px;
+        }
     }
 
     &__items {
         display: flex;
+        @include for-phone-portrait {
+            flex-direction: column;
+        }
     }
 
     &__item {
@@ -15,8 +21,22 @@
         align-items: center;
         border: 1px solid #F2F2F2;
         border-radius: 3px;
+        transition: all 0.2s;
+        &:hover {
+            box-shadow: 0px 2px 16px 2px rgba(94, 15, 17, 0.22);
+            .category-product__text {
+                color: #D20004;
+            }
+        }
         &:nth-child(1) {
             margin-left: 0;
+        }
+        @include for-phone-portrait {
+            margin-left: 0;
+            margin-top: 10px;
+            &:nth-child(1) {
+                margin-top: 0;
+            }
         }
     }
 
@@ -32,9 +52,26 @@
         font-size: 14px;
         line-height: 16px;
         color: #000000;
+        transition: all 0.2s;
     }
 
     &__title {
         margin-bottom: 60px;
+        @include for-phone-portrait {
+            margin-bottom: 30px;
+        }
+        .title {
+            @include for-phone-portrait {
+                padding-left: 19px;
+                padding-right: 0;
+            }
+        } 
+    }
+
+    &__back {
+        display: none;
+        @include for-phone-portrait {
+            display: block;
+        }
     }
 }

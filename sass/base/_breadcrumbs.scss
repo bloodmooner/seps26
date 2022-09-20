@@ -1,5 +1,7 @@
 .breadcrumbs {
-
+    @include for-phone-portrait {
+        display: none;
+    }
     &__list {
         margin-top: 28px;
         margin-bottom: 14px;
