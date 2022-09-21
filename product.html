@@ -87,6 +87,39 @@
         </div>
     </header> -->
 
+    <div class="header-product">
+        <div class="container">
+            <div class="header-product__wrapper">
+                <div class="header-product__left">
+                    <div class="header-product__image">
+                        <img src="assets/img/product-header.png" alt="">
+                    </div>
+                    <p class="header-product__text">
+                        Трансформаторная подстанция КТП ТАС К/К 1000/10/0,4
+                    </p>
+                </div>
+                <button class="header-product__btn">Уточнить цену</button>
+            </div>
+        </div>
+        <div class="header-product__divider"></div>
+        <div class="container">
+            <div class="header-product__tabs">
+
+                <div class="wrapper-product">
+                    <div class="tabs-product">
+                        <span class="tab-product active">Описание</span>
+                        <span class="tab-product">Характеристики</span>
+                        <span class="tab-product">Доставка и оплата</span>        
+                    </div>
+                         
+                    <div class="tab_content-product">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
   <div class="product">
     <div class="container">
       <div class="breadcrumbs">
@@ -225,16 +258,22 @@
                     <button class="btn product__controls-price js-open-modal-order">Уточнить цену</button>
                     <ul class="product__controls-items">
                         <li class="product__controls-item">
-                            <img src="assets/svg/product-delivery.svg" alt="" class="product__controls-icon">
+                            <div class="product__controls-icon">
+                                <img src="assets/svg/product-delivery.svg" alt="">
+                            </div>
                             <p class="product__controls-name">Доставка до Г. Москва от 1 дня</p>
                         </li>
                         <li class="product__controls-item">
-                            <img src="assets/svg/product-add.svg" alt="" class="product__controls-icon">
+                            <div class="product__controls-icon">
+                                <img src="assets/svg/product-add.svg" alt="" >
+                            </div>
                             <p class="product__controls-name">Есть пусконакладка</p>
                         </li>
                     </ul>
                     <div class="product__question product__question_mob">
-                        <img class="product__question-icon" src="assets/svg/product-questions.svg" alt="question" >
+                        <div class="product__controls-icon">
+                            <img src="assets/svg/product-questions.svg" alt="question" >
+                        </div>
                         <p class="product__question-text">
                             Задать вопрос по этому товару
                         </p>
@@ -246,11 +285,19 @@
         <div class="product__tabs">
 
             <div class="wrapper">
-                <div class="tabs">
-                    <span class="tab">Описание</span>
-                    <span class="tab">Характеристики</span>
-                    <span class="tab">Доставка и оплата</span>        
+                <div class="tabs__slider">
+                    <div class="tabs">
+                        <span class="tab active">Описание</span>
+                        <span class="tab">Характеристики</span>
+                        <span class="tab">Доставка и оплата</span>        
+                    </div>
+                    <div class="tabs__arrows">
+                        <div class="tabs__arrow_right">
+                            <img class="tabs__arrow-icon" src="assets/svg/product-tab.svg" alt="" >
+                        </div>
+                    </div>
                 </div>
+                
                 <div class="tab_content">
                     <div class="tab_item">
                         <div class="product__tab">

@@ -163,6 +163,7 @@
             bottom: 0;
             left: 0;
             width: 100%;
+            border-radius: 0px;
         }
     }
 
@@ -189,12 +190,22 @@
         &:nth-child(2) {
             .product__controls-icon {
                 margin-right: 26px;
+                @include for-phone-portrait {
+                    margin-right: 11px;
+                }
             }
         }
     }
 
     &__controls-icon {
         object-fit: contain;
+        margin-right: 11px;
+        @include for-phone-portrait {
+            margin-right: 11px;
+            width: 30px;
+            display: flex;
+            justify-content: center;
+        }
     }
 
     &__controls-name {
@@ -217,7 +228,12 @@
     }
 
     &__tab {
-        padding-top: 57px;
+        padding-top: 45px;
+        padding-left: 40px;
+        padding-right: 40px;
+        background: #FFFFFF;
+        border: 1px solid #F2F2F2;
+        border-radius: 3px;
     }
 
     &__tab-content {
@@ -351,6 +367,37 @@
 }
 
 
+.tabs {
+    .slick-slide {
+        width: auto!important;
+    }
+
+    &__slider {
+        position: relative;
+    }
+
+    &__arrows {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -25px;
+    }
+
+    &__arrow {
+
+        &_right {
+        }
+    }
+
+    &__arrow-icon {
+    }
+}
+
+
+
+.tabs-product {
+    display: flex;
+}
 
 
 .tab {
@@ -371,6 +418,34 @@
     }
 }
 
+
+.tab-product {
+    margin-left: 70px;
+    position: relative;
+    display: block;
+    width: fit-content;
+    padding: 15px 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: #888888;
+    cursor: pointer;
+    &:nth-child(1) {
+        margin-left: 0;
+    }
+    @include for-phone-portrait {
+        padding: 18px 15px;
+    }
+}
+
+.wrapper, .wrapper-product {
+    @include for-phone-portrait {
+        padding-right: 17px;
+    }
+}
+
 .wrapper .active { 
     &::before {
         content: '';
@@ -383,17 +458,43 @@
     }
 }
 
-.tab_content {
+.wrapper-product .active { 
+    color: #000000;
+    font-weight: 600;
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background: #D20004;
+    }
+}
+
+.tab_content, .tab-content-product {
     margin-top: 45px;
+    @include for-phone-portrait {
+        margin-top: 30px;
+    }
 }
 
 .tab_item {
      display: none; 
-     padding: 0 40px;
+     /* padding: 0 40px; */
      @include for-phone-portrait {
         padding: 0;
      }
 }
 .tab_item:first-child {
      display: block; 
+}
+
+.slick-slide {
+    margin: 0 5px;
+}
+
+/* the parent */
+.slick-list {
+    margin: 0 -5px;
 }

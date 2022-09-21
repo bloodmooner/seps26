@@ -11,7 +11,6 @@ $(document).ready(function(){
         $('.modal_order').removeClass('modal_order-active');
     });
   
-
     /* $(".wrapper .tab").click(function() {
         $(".wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
         $(".tab_item").hide().eq($(this).index()).fadeIn()
@@ -24,19 +23,18 @@ $(document).ready(function(){
         
     }); */
 
-
-    $('body').on('click', '.slick-slide', function () {
-        alert('click working');
-        $(this).find(".wrapper .tab").removeClass("active").eq($(this).index()).addClass("active")
-        $(".tab_item").hide().eq($(this).index()).fadeIn()
-    }).eq(0).addClass("active");
+    $('body').on('click', '.slick-track .slick-slide', function () {
+        $('.slick-track .slick-slide').find("span").removeClass("active");
+        $(this).find("span").addClass("active");
+        $(".tab_item").hide().eq($(this).index()).fadeIn();
+    });
 
 
     $('.tabs').slick({
         slidesToShow: 3,
         arrows: true,
         infinite: false,
-        nextArrow: $(document).find('.related__arrow_left'),
+        nextArrow: $(document).find('.tabs__arrow_right'),
         prevArrow: $(document).find('.related__arrow_right'),
         responsive: [
             {
@@ -61,7 +59,7 @@ $(document).ready(function(){
                 slidesToShow: 2,
                 variableWidth: true,
                 dots: false,
-                arrows: false
+                arrows: true
               }
           },
           

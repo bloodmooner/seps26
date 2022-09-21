@@ -1,0 +1,62 @@
+.header-product {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 12px 1px rgba(0, 0, 0, 0.25);
+    @include for-phone-portrait {
+        display: none;
+    }
+    &__wrapper {
+        padding-top: 6px;
+        padding-bottom: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+    }
+
+    &__image {
+        margin-right: 25px;
+    }
+
+    &__text {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 18px;
+        color: #000000;
+    }
+
+    &__btn {
+        padding: 14px 31px;
+        background: #D20004;
+        border-radius: 20px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 134.4%;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        transition: all 0.3s;
+        &:hover {
+            box-shadow: 0px 4px 9px 3px rgba(0, 0, 0, 0.15);
+            background: #FFFFFF;
+            color: #D20004;
+        }
+    }
+
+    &__divider {
+        height: 1px;
+        background: #F2F2F2;
+    }
+
+    &__tabs {
+    }
+}
