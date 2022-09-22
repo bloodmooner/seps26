@@ -23,9 +23,27 @@ $(document).ready(function(){
         
     }); */
 
+
+    $(".tab-product").click(function() {
+      $(".tab-product").removeClass("active");
+      $('.slick-track .slick-slide').find("span").removeClass("active");
+
+
+      $(this).addClass("active");
+
+      $($(".tab_item")[$(this).index()]).addClass('active');
+      $($(".slick-track .slick-slide")[$(this).index()]).find('span').addClass("active");
+
+      $(".tab_item").hide().eq($(this).index()).fadeIn();
+    });
+
     $('body').on('click', '.slick-track .slick-slide', function () {
         $('.slick-track .slick-slide').find("span").removeClass("active");
         $(this).find("span").addClass("active");
+
+        $(".tab-product").removeClass("active");
+        $($(".tab-product")[$(this).index()]).addClass('active');
+
         $(".tab_item").hide().eq($(this).index()).fadeIn();
     });
 
