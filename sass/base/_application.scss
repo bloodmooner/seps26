@@ -21,6 +21,10 @@
         line-height: 34px;
         color: #000000;
         text-align: left;
+        @include for-phone-portrait {
+            font-size: 24px;
+            line-height: 28px;
+        }
     }
 
     &__close-icon {
@@ -175,6 +179,7 @@
 }
   
 .modal {
+    /* margin-top: 140px; */
     display: none;
     /* width: 100%;
         max-width: 600px; */
@@ -198,6 +203,39 @@
 .modal_order-active {
     display: block;
     opacity: 1;
+    height: 100vh;
+    -ms-flex-direction: column;
+        /* flex-direction: column; */
+        /* -webkit-box-align: start; */
+        -ms-flex-align: start;
+        /* align-items: flex-start; */
+        /* -webkit-box-pack: start; */
+        -ms-flex-pack: start;
+        /* justify-content: flex-start; */
+        /* opacity: 0; */
+        overflow-y: scroll;
+    @include for-phone-portrait {
+        position: fixed;
+        /* top: 0; */
+        /* left: 0; */
+        /* z-index: 100; */
+        width: 100vw;
+        height: 100vh;
+        /* padding: 40px 34px; */
+        /* display: none; */
+        /* -webkit-box-orient: vertical; */
+        /* -webkit-box-direction: normal; */
+        -ms-flex-direction: column;
+        /* flex-direction: column; */
+        /* -webkit-box-align: start; */
+        -ms-flex-align: start;
+        /* align-items: flex-start; */
+        /* -webkit-box-pack: start; */
+        -ms-flex-pack: start;
+        /* justify-content: flex-start; */
+        /* opacity: 0; */
+        overflow-y: scroll;
+    }
 }
 
 .switch {
