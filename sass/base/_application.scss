@@ -3,6 +3,9 @@
     &__wrapper {
         background: #FFFFFF;
         border-radius: 25px;
+        @include for-phone-portrait {
+            border-radius: 0;
+        }
     }
 
     &__header {
@@ -46,6 +49,9 @@
             width: 4px;
             background: #D20004;
             border-radius: 20px;
+            @include for-phone-portrait {
+                height: 40px;
+            }
         }  
     }
 
@@ -132,10 +138,14 @@
     }
 
     &__privacy-text {
+        text-align: left;
     }
 
     &__switch {
         margin-right: 25px;
+        @include for-phone-portrait {
+            margin-right: 40px;
+        }
     }
 
     &__btn {
@@ -198,6 +208,9 @@
     transition: 1s all;
     z-index: 1000;
     opacity: 0;
+    @include for-phone-portrait {
+        border-radius: 0;
+    }
 }
 
 .modal_order-active {

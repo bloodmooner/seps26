@@ -630,6 +630,12 @@ template {
   border-radius: 25px;
 }
 
+@media (max-width: 768px) {
+  .application__wrapper {
+    border-radius: 0;
+  }
+}
+
 .application__header {
   position: relative;
 }
@@ -676,6 +682,12 @@ template {
   width: 4px;
   background: #D20004;
   border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+  .application__message::before {
+    height: 40px;
+  }
 }
 
 .application__subtitle {
@@ -779,8 +791,18 @@ template {
   color: #D20004;
 }
 
+.application__privacy-text {
+  text-align: left;
+}
+
 .application__switch {
   margin-right: 25px;
+}
+
+@media (max-width: 768px) {
+  .application__switch {
+    margin-right: 40px;
+  }
 }
 
 .application__btn {
@@ -844,6 +866,12 @@ template {
   transition: 1s all;
   z-index: 1000;
   opacity: 0;
+}
+
+@media (max-width: 768px) {
+  .modal {
+    border-radius: 0;
+  }
 }
 
 .modal_order-active {
@@ -1597,6 +1625,9 @@ input:checked + .slider:before {
   /* border: 1px dashed #000000;
         width: 100%;
         height: 1px; */
+  /* background-image: url('../../assets/img/product/divider.png');
+        width: 100%;
+        height: 2px; */
 }
 
 .product__tab-char-content {
